@@ -1,0 +1,214 @@
+/* Filename - App.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  font-family: "Roboto";
+}
+  
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Change to column to stack header, sidebar, and content vertically */
+}
+
+table {
+  border: 2px solid #2c3e50;
+  border-collapse: collapse;
+  width: 800px;
+  height: 200px;
+}
+
+th, td {
+  border-right: 1px solid #dddd;
+}
+
+th {
+  border-bottom: 1px solid black;
+}
+
+td {
+  text-align: center;
+  border-bottom: 1px solid #ddd; /* Adds a line between each row */
+}
+
+.sidebar {
+  margin-top: 50px;
+  width: 250px; /* Adjust width as needed */
+  background-color: #2c3e50; /* Darker background color for better visibility */
+  color: #ecf0f1; /* Light text color for contrast */
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto; /* Add vertical scrolling if needed */
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #34495e; /* Border to the right of the sidebar */
+}
+
+.instructor-button {
+  background: none;
+  border: none;
+  color: #ecf0f1; /* Same light color for text */
+  text-align: left;
+  padding: 10px 15px; /* Same padding as other sidebar links */
+  margin-bottom: 10px; /* Space below the button */
+  border-radius: 4px; /* Rounded corners for consistency */
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.instructor-button {
+  background: none;
+  border: none;
+  color: #ecf0f1;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+  width: 100%;
+}
+
+.instructor-button:hover {
+  background-color: #34495e; /* Darker background on hover for consistency */
+}
+
+.instructor-submenu {
+  margin-left: 15px;
+}
+
+.instructor-submenu a {
+  color: #ecf0f1; /* Same light color for submenu links */
+  text-decoration: none;
+  display: block;
+  padding: 8px 15px; /* Padding similar to sidebar links */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.sidebar a {
+  color: #ecf0f1; /* Light color for links */
+  text-decoration: none;
+  padding: 10px 15px; /* Add padding for better click area */
+  margin-bottom: 10px; /* Space between links */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.sidebar a:hover {
+  background-color: #34495e; /* Darker background on hover */
+}
+
+.content {
+  margin-top: 50px;
+  margin-left: 300px;
+  padding: 20px;
+  flex: 1;
+  box-sizing: border-box;
+  width: calc(100% - 250px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.dropdown a {
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #f4f4f4;
+}
+
+.table-wrapper {
+  display: inline-block; /* Keeps the table wrapper inline */
+  width: fit-content; /* Ensures the container fits the table width */
+  margin-top: 10px; /* Adds some space above the wrapper */
+}
+
+.button-container {
+  text-align: right; /* Aligns the button to the right */
+  padding-top: 5px; /* Adds space above the button */
+  padding-bottom: 5px;
+}
+
+.table-button-container {
+  padding-top: 5px; /* Adds space above the button */
+  padding-bottom: 5px;
+}
+
+.submit-button {
+  display: inline-block; /* Ensures the button behaves like an inline element */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto; /* Allow height to adjust based on content */
+    position: relative; /* Change position to relative on small screens */
+    border-right: none; /* Remove border on small screens */
+  }
+
+  .content {
+    margin-left: 0; /* Reset margin for small screens */
+  }
+}
